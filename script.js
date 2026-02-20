@@ -37,21 +37,13 @@ const frame = document.getElementById("gameFrame");
 const closeBtn = document.getElementById("closeBtn");
 const searchInput = document.getElementById("search");
 
-function loadGames(list) {
-  container.innerHTML = "";
-  list.forEach(game => {
-    const card = document.createElement("div");
-    card.className = "game-card";
-    card.innerText = game.title;
-    card.onclick = () => {
-    window.open(game.link, "_blank");
-};
-    container.appendChild(card);
-  });
+function openGame(link) {
+  frame.src = link;
+  modal.classList.add("active");
 }
 
 closeBtn.onclick = () => {
-  modal.classList.add("hidden");
+  modal.classList.remove("active");
   frame.src = "";
 };
 
