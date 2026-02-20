@@ -63,14 +63,16 @@ main {
 
 #gameModal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  display: flex;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: none;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
+}
+
+#gameModal.active {
+  display: flex;
 }
 
 #gameFrame {
@@ -85,10 +87,7 @@ main {
   right: 30px;
   background: red;
   border: none;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
-}
-
-.hidden {
-  display: none;
+  z-index: 10000;
 }
