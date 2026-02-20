@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ILearnzz Company</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>ILearnzz Company</h1>
+  <nav>
+    <a href="#" data-category="all">All</a>
+    <a href="#" data-category="action">Action</a>
+    <a href="#" data-category="fps">FPS</a>
+    <a href="#" data-category="car">Car Games</a>
+  </nav>
+  <input type="text" id="search" placeholder="Search games...">
+</header>
+
+<main id="gamesContainer"></main>
+
+<div id="gameModal" class="hidden">
+  <button id="closeBtn">✖</button>
+  <iframe id="gameFrame" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
