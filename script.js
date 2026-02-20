@@ -44,9 +44,8 @@ function loadGames(list) {
     card.className = "game-card";
     card.innerText = game.title;
     card.onclick = () => {
-      frame.src = game.link;
-      modal.classList.remove("hidden");
-    };
+    window.open(game.link, "_blank");
+};
     container.appendChild(card);
   });
 }
